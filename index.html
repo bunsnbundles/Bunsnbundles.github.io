@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buns & Bundles | Self-Love Celebration</title>
+    <title>Burns & Bundles | Self-Love Celebration</title>
     <style>
-        /* Luxe Nude Color Palette */
+        /* Custom Nude Color Palette */
         :root {
-            --cashmere: #F9F1F0;
-            --blush: #FADCD9;
+            --nude: #D8BBA4;
+            --nude-light: #F0E2D6;
+            --nude-dark: #C4A58B;
             --peach: #FFBE98;
-            --terracotta: #E8A798;
-            --cocoa: #B08E8B;
+            --accent: #B08E8B;
         }
         
         body {
             margin: 0;
             padding: 0;
             font-family: 'Playfair Display', serif;
-            background-color: var(--cashmere);
-            color: var(--cocoa);
-            overflow-x: hidden;
+            background-color: var(--nude-light);
+            color: #5A4A42;
+            overflow: hidden;
         }
         
         .container {
@@ -30,18 +30,18 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, var(--blush), var(--cashmere));
+            background: linear-gradient(135deg, var(--nude), var(--nude-light));
         }
         
         .message-box {
             max-width: 800px;
             padding: 50px;
-            background: rgba(249, 241, 240, 0.85);
+            background: rgba(255, 255, 255, 0.7);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(232, 167, 152, 0.2);
+            box-shadow: 0 10px 30px rgba(216, 187, 164, 0.3);
             z-index: 10;
             backdrop-filter: blur(5px);
-            border: 1px solid rgba(232, 167, 152, 0.15);
+            border: 1px solid rgba(216, 187, 164, 0.3);
             animation: subtleFloat 8s infinite ease-in-out;
         }
         
@@ -52,7 +52,7 @@
         
         h1 {
             font-size: 3.5rem;
-            color: var(--cocoa);
+            color: var(--accent);
             margin-bottom: 20px;
             font-weight: 400;
             letter-spacing: 1px;
@@ -62,13 +62,15 @@
             font-size: 1.3rem;
             line-height: 1.8;
             margin-bottom: 25px;
+            color: #5A4A42;
         }
         
         .signature {
             font-family: 'Parisienne', cursive;
             font-size: 2rem;
-            color: var(--terracotta);
+            color: var(--nude-dark);
             margin-top: 30px;
+            font-weight: bold;
         }
         
         /* Animated Peaches */
@@ -76,20 +78,22 @@
             position: absolute;
             width: 60px;
             height: 60px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,15 C60,5 80,5 85,20 C95,35 90,55 80,65 C70,85 30,85 20,65 C10,55 5,35 15,20 C20,5 40,5 50,15 Z" fill="%23FFBE98"/><path d="M50,25 C55,20 60,25 58,30 C56,35 52,33 50,30 C48,33 44,35 42,30 C40,25 45,20 50,25 Z" fill="%23E8A798"/></svg>');
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,15 C60,5 80,5 85,20 C95,35 90,55 80,65 C70,85 30,85 20,65 C10,55 5,35 15,20 C20,5 40,5 50,15 Z" fill="%23FFBE98"/><path d="M50,25 C55,20 60,25 58,30 C56,35 52,33 50,30 C48,33 44,35 42,30 C40,25 45,20 50,25 Z" fill="%23D8BBA4"/></svg>');
             background-size: contain;
-            z-index: 1;
-            animation: bounce 6s infinite ease-in-out;
-            filter: drop-shadow(0 3px 5px rgba(176, 142, 139, 0.2));
+            background-repeat: no-repeat;
+            z-index: 5;
+            animation: bounce 4s infinite ease-in-out;
+            filter: drop-shadow(0 3px 5px rgba(91, 74, 66, 0.2));
+            opacity: 0.9;
         }
         
         /* Animated Cheeks */
         .cheek {
             position: absolute;
             border-radius: 50%;
-            background: radial-gradient(ellipse at center, var(--terracotta) 0%, var(--cocoa) 100%);
+            background: radial-gradient(ellipse at center, var(--nude) 0%, var(--nude-dark) 100%);
             opacity: 0.3;
-            filter: blur(8px);
+            filter: blur(10px);
             z-index: 1;
             animation: pulse 5s infinite ease-in-out;
         }
@@ -105,8 +109,18 @@
         }
         
         @keyframes bounce {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-30px) rotate(10deg); }
+            0%, 100% { 
+                transform: translateY(0) rotate(0deg) scale(1);
+            }
+            25% {
+                transform: translateY(-20px) rotate(5deg) scale(1.05);
+            }
+            50% { 
+                transform: translateY(-40px) rotate(-5deg) scale(1.1);
+            }
+            75% {
+                transform: translateY(-20px) rotate(3deg) scale(1.05);
+            }
         }
         
         @keyframes pulse {
@@ -114,24 +128,11 @@
             50% { transform: scale(1.2); opacity: 0.5; }
         }
         
-        /* Silhouette Decoration */
-        .silhouette {
-            position: absolute;
-            width: 300px;
-            height: 500px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400"><path d="M100,20 C120,20 130,50 130,80 C130,110 110,120 100,120 C90,120 70,110 70,80 C70,50 80,20 100,20 Z M80,130 C80,150 90,170 100,180 C110,170 120,150 120,130 L120,250 C120,300 100,350 100,380 C100,350 80,300 80,250 Z" fill="%23B08E8B" opacity="0.1"/></svg>');
-            background-repeat: no-repeat;
-            background-position: center;
-            z-index: 0;
-            opacity: 0.15;
-        }
-        
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             p { font-size: 1.1rem; }
             .message-box { padding: 30px; }
-            .cheek-large { width: 80px; height: 60px; }
             .peach { width: 40px; height: 40px; }
         }
     </style>
@@ -139,17 +140,13 @@
 </head>
 <body>
     <div class="container">
-        <!-- Silhouettes -->
-        <div class="silhouette" style="left: 5%; top: 10%;"></div>
-        <div class="silhouette" style="right: 5%; bottom: 10%; transform: scaleX(-1);"></div>
-        
         <!-- Message Box -->
         <div class="message-box">
             <h1>This Season is a Celebration</h1>
             <p>Of self-love and embracing the beauty of being unapologetically you. It's about dedicating time to the things that nourish your soul—whether that's indulging in the joy of getting your hair done or simply honoring your unique essence.</p>
             <p>My new line is crafted to embody this very spirit: a tribute to confidence, authenticity, and the radiant power of self-worth. When you look your best, you shine your brightest—and that glow comes from within.</p>
             <p>Remember, nurturing yourself is the foundation upon which all greatness is built.</p>
-            <div class="signature">Buns & Bundles</div>
+            <div class="signature">Burns & Bundles</div>
         </div>
     </div>
 
@@ -160,10 +157,10 @@
             for (let i = 0; i < 8; i++) {
                 const peach = document.createElement('div');
                 peach.className = 'peach';
-                peach.style.left = `${Math.random() * 90 + 5}%`;
-                peach.style.top = `${Math.random() * 90 + 5}%`;
-                peach.style.animationDelay = `${Math.random() * 5}s`;
-                peach.style.transform = `scale(${0.7 + Math.random() * 0.6})`;
+                peach.style.left = `${Math.random() * 85 + 5}%`;
+                peach.style.top = `${Math.random() * 85 + 5}%`;
+                peach.style.animationDelay = `${Math.random() * 4}s`;
+                peach.style.transform = `rotate(${Math.random() * 360}deg)`;
                 container.appendChild(peach);
             }
         }
@@ -177,8 +174,8 @@
                 const cheek = document.createElement('div');
                 const size = sizes[i % 2];
                 cheek.className = `cheek cheek-${size}`;
-                cheek.style.left = `${Math.random() * 90 + 5}%`;
-                cheek.style.top = `${Math.random() * 90 + 5}%`;
+                cheek.style.left = `${Math.random() * 85 + 5}%`;
+                cheek.style.top = `${Math.random() * 85 + 5}%`;
                 cheek.style.animationDelay = `${Math.random() * 5}s`;
                 container.appendChild(cheek);
             }
