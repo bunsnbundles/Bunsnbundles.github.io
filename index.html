@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buns & Bundle | Season of Self-Love</title>
+    <title>Buns & Bundles | Season of Self-Love</title>
     <style>
         /* Deep Nude Aesthetics */
         :root {
@@ -145,3 +145,109 @@
                 if (i < 3) {
                     // Left side
                     cheek.style.left = `${5 + (Math.random() * 15)}%`;
+                    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Buns & Bundles | Juicy Aesthetics</title>
+    <style>
+        /* Deep Velvet Nudes */
+        :root {
+            --cashmere: #F3E7E3;
+            --peachbloom: #E8C4B8;
+            --taffy: #D8A798;
+            --cinnamon: #B08E8B;
+            --molasses: #7A5F5B;
+            --peach: #FFBE98;
+        }
+        
+        body {
+            background: var(--cashmere);
+            font-family: 'Playfair Display', serif;
+            color: var(--molasses);
+            margin: 0;
+            overflow-x: hidden;
+        }
+        
+        .love-header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: 
+                radial-gradient(circle at 20% 30%, var(--peachbloom) 0%, transparent 30%),
+                radial-gradient(circle at 80% 70%, var(--taffy) 0%, transparent 30%),
+                var(--cashmere);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Peaches */
+        .peach {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,15 C60,5 80,5 85,20 C95,35 90,55 80,65 C70,85 30,85 20,65 C10,55 5,35 15,20 C20,5 40,5 50,15 Z" fill="%23FFBE98"/><path d="M50,25 C55,20 60,25 58,30 C56,35 52,33 50,30 C48,33 44,35 42,30 C40,25 45,20 50,25 Z" fill="%23D8A798"/></svg>');
+            background-size: contain;
+            z-index: 2;
+            animation: float 6s infinite ease-in-out;
+            filter: drop-shadow(0 3px 5px rgba(120, 95, 91, 0.2));
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(10deg); }
+        }
+        
+        /* Rest of your existing CSS (buns, message box, etc.) */
+        .love-message {
+            max-width: 800px;
+            padding: 50px;
+            background: rgba(243, 231, 227, 0.9);
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(216, 167, 152, 0.4);
+            z-index: 10;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(216, 167, 152, 0.3);
+        }
+        
+        /* ... (keep all your existing styles) ... */
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Parisienne&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="love-header">
+        <!-- Peaches will be added by JS -->
+        <div class="love-message">
+            <div class="love-title">Love Buns & Bundles</div>
+            <h1>Juicy Self-Love</h1>
+            <p>Where ripe confidence meets playful elegance. Our peaches symbolize the sweetness of embracing every curve.</p>
+            <!-- ... rest of your message ... -->
+        </div>
+    </section>
+
+    <script>
+        // Add bouncing peaches
+        function createPeaches() {
+            const header = document.querySelector('.love-header');
+            for (let i = 0; i < 8; i++) {
+                const peach = document.createElement('div');
+                peach.className = 'peach';
+                peach.style.left = `${Math.random() * 90 + 5}%`;
+                peach.style.top = `${Math.random() * 90 + 5}%`;
+                peach.style.animationDelay = `${Math.random() * 5}s`;
+                peach.style.transform = `scale(${0.7 + Math.random() * 0.6})`;
+                header.appendChild(peach);
+            }
+        }
+        
+        // Call this with your existing animations
+        window.onload = function() {
+            createPeaches();
+            // Keep your existing createBuns() call if needed
+        };
+    </script>
+</body>
+</html>
