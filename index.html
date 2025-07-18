@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buns & Bundles | Self-Love Celebration</title>
+    <title>Buns & Bundles | Celebration of Self-Love</title>
     <style>
-        /* Custom Nude Color Palette */
+        /* Luxe Nude Palette */
         :root {
-            --nude: #D8BBA4;
-            --nude-light: #F0E2D6;
-            --nude-dark: #C4A58B;
+            --cashmere: #F9F1F0;
+            --blush: #FADCD9;
             --peach: #FFBE98;
-            --accent: #B08E8B;
+            --terracotta: #E8A798;
+            --cocoa: #B08E8B;
+            --nude: #D8BBA4;
         }
         
         body {
             margin: 0;
             padding: 0;
             font-family: 'Playfair Display', serif;
-            background-color: var(--nude-light);
+            background-color: var(--cashmere);
             color: #5A4A42;
             overflow: hidden;
         }
@@ -30,50 +31,48 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, var(--nude), var(--nude-light));
+            background: linear-gradient(135deg, var(--nude), var(--cashmere));
         }
         
         .message-box {
             max-width: 800px;
             padding: 50px;
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(249, 241, 240, 0.85);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(216, 187, 164, 0.3);
+            box-shadow: 0 10px 30px rgba(216, 187, 164, 0.2);
             z-index: 10;
             backdrop-filter: blur(5px);
-            border: 1px solid rgba(216, 187, 164, 0.3);
-            animation: subtleFloat 8s infinite ease-in-out;
-        }
-        
-        @keyframes subtleFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+            border: 1px solid rgba(216, 187, 164, 0.15);
         }
         
         h1 {
-            font-size: 3.5rem;
-            color: var(--accent);
-            margin-bottom: 20px;
+            font-size: 2.8rem;
+            color: var(--cocoa);
+            margin-bottom: 15px;
             font-weight: 400;
-            letter-spacing: 1px;
+            line-height: 1.2;
         }
         
         p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             line-height: 1.8;
-            margin-bottom: 25px;
-            color: #5A4A42;
+            margin-bottom: 20px;
+        }
+        
+        .highlight {
+            font-style: italic;
+            color: var(--terracotta);
         }
         
         .signature {
             font-family: 'Parisienne', cursive;
-            font-size: 2rem;
-            color: var(--nude-dark);
+            font-size: 2.5rem;
+            color: var(--terracotta);
             margin-top: 30px;
-            font-weight: bold;
+            text-align: center;
         }
         
-        /* Animated Peaches */
+        /* VISIBLE Animated Peaches */
         .peach {
             position: absolute;
             width: 60px;
@@ -83,19 +82,25 @@
             background-repeat: no-repeat;
             z-index: 5;
             animation: bounce 4s infinite ease-in-out;
-            filter: drop-shadow(0 3px 5px rgba(91, 74, 66, 0.2));
+            filter: drop-shadow(0 3px 5px rgba(91, 74, 66, 0.3));
             opacity: 0.9;
+            /* Ensures visibility */
+            display: block !important;
+            visibility: visible !important;
         }
         
-        /* Animated Cheeks */
+        /* VISIBLE Cheek Elements */
         .cheek {
             position: absolute;
             border-radius: 50%;
-            background: radial-gradient(ellipse at center, var(--nude) 0%, var(--nude-dark) 100%);
-            opacity: 0.3;
-            filter: blur(10px);
-            z-index: 1;
+            background: radial-gradient(ellipse at center, var(--terracotta) 0%, var(--nude) 100%);
+            opacity: 0.4;
+            filter: blur(8px);
+            z-index: 3;
             animation: pulse 5s infinite ease-in-out;
+            /* Ensures visibility */
+            display: block !important;
+            visibility: visible !important;
         }
         
         .cheek-large {
@@ -124,16 +129,17 @@
         }
         
         @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.3; }
-            50% { transform: scale(1.2); opacity: 0.5; }
+            0%, 100% { transform: scale(1); opacity: 0.4; }
+            50% { transform: scale(1.2); opacity: 0.6; }
         }
         
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            p { font-size: 1.1rem; }
+            h1 { font-size: 2rem; }
+            p { font-size: 1rem; }
             .message-box { padding: 30px; }
             .peach { width: 40px; height: 40px; }
+            .cheek-large { width: 80px; height: 60px; }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Parisienne&display=swap" rel="stylesheet">
@@ -142,19 +148,25 @@
     <div class="container">
         <!-- Message Box -->
         <div class="message-box">
-            <h1>This Season is a Celebration</h1>
-            <p>Of self-love and embracing the beauty of being unapologetically you. It's about dedicating time to the things that nourish your soul—whether that's indulging in the joy of getting your hair done or simply honoring your unique essence.</p>
-            <p>My new line is crafted to embody this very spirit: a tribute to confidence, authenticity, and the radiant power of self-worth. When you look your best, you shine your brightest—and that glow comes from within.</p>
-            <p>Remember, nurturing yourself is the foundation upon which all greatness is built.</p>
-            <div class="signature">Burns & Bundles</div>
+            <h1>This season is a celebration of self-love</h1>
+            <p>Of embracing the beauty of being unapologetically you.<br>
+            It's about making time for the things that nourish your spirit, whether that's indulging in the joy of getting your hair done or simply honoring your unique essence.</p>
+            
+            <p class="highlight">Buns & Bundles is crafted to embody this very spirit:<br>
+            A tribute to confidence, authenticity, and the radiant power of self-worth.<br>
+            When you look your best, you shine your brightest and that glow comes from within.</p>
+            
+            <p>Remember: Nurturing yourself is the foundation upon which all greatness is built.</p>
+            
+            <div class="signature">Buns & Bundles</div>
         </div>
     </div>
 
     <script>
-        // Create animated peaches
+        // Create VISIBLE bouncing peaches
         function createPeaches() {
             const container = document.querySelector('.container');
-            for (let i = 0; i < 8; i++) {
+            for (let i = 0; i < 10; i++) { // Increased to 10 peaches
                 const peach = document.createElement('div');
                 peach.className = 'peach';
                 peach.style.left = `${Math.random() * 85 + 5}%`;
@@ -162,15 +174,16 @@
                 peach.style.animationDelay = `${Math.random() * 4}s`;
                 peach.style.transform = `rotate(${Math.random() * 360}deg)`;
                 container.appendChild(peach);
+                console.log('Peach created at', peach.style.left, peach.style.top); // Debugging
             }
         }
         
-        // Create cheek elements
+        // Create VISIBLE cheek elements
         function createCheeks() {
             const container = document.querySelector('.container');
             const sizes = ['large', 'medium'];
             
-            for (let i = 0; i < 6; i++) {
+            for (let i = 0; i < 8; i++) { // Increased to 8 cheeks
                 const cheek = document.createElement('div');
                 const size = sizes[i % 2];
                 cheek.className = `cheek cheek-${size}`;
@@ -178,6 +191,7 @@
                 cheek.style.top = `${Math.random() * 85 + 5}%`;
                 cheek.style.animationDelay = `${Math.random() * 5}s`;
                 container.appendChild(cheek);
+                console.log('Cheek created at', cheek.style.left, cheek.style.top); // Debugging
             }
         }
         
@@ -185,6 +199,7 @@
         window.onload = function() {
             createPeaches();
             createCheeks();
+            console.log('All animations loaded'); // Debugging
         };
     </script>
 </body>
