@@ -3,153 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buns & Bundle | Season of Self-Love</title>
+    <title>Love Buns & Bundles | Sensual Self-Care</title>
     <style>
-        /* Nude Aesthetics */
+        /* Deep Velvet Nudes */
         :root {
-            --cream: #F9F1F0;
-            --blush: #FADCD9;
-            --terracotta: #E8A798;
-            --cocoa: #D8A798;
-            --taupe: #B08E8B;
+            --cashmere: #F3E7E3;
+            --peachbloom: #E8C4B8;
+            --taffy: #D8A798;
+            --cinnamon: #B08E8B;
+            --molasses: #7A5F5B;
         }
         
         body {
-            background-color: var(--cream);
-            font-family: 'Cormorant Garamond', serif;
-            color: var(--taupe);
+            background: var(--cashmere);
+            font-family: 'Playfair Display', serif;
+            color: var(--molasses);
             margin: 0;
             overflow-x: hidden;
         }
         
-        .season-header {
+        .love-header {
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(to bottom, var(--blush), var(--cream));
+            background: 
+                radial-gradient(circle at 20% 30%, var(--peachbloom) 0%, transparent 30%),
+                radial-gradient(circle at 80% 70%, var(--taffy) 0%, transparent 30%),
+                var(--cashmere);
             position: relative;
             overflow: hidden;
-            padding: 0 20px;
         }
         
-        .message-box {
+        .love-message {
             max-width: 800px;
-            padding: 40px;
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(216, 167, 152, 0.2);
+            padding: 50px;
+            background: rgba(243, 231, 227, 0.9);
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(216, 167, 152, 0.4);
             z-index: 10;
             backdrop-filter: blur(5px);
+            border: 1px solid rgba(216, 167, 152, 0.3);
         }
         
         h1 {
-            font-size: 3.5rem;
-            color: var(--terracotta);
-            margin-bottom: 20px;
-            font-weight: 300;
+            font-size: 4rem;
+            color: var(--molasses);
+            margin-bottom: 25px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        
+        .love-title {
+            font-family: 'Parisienne', cursive;
+            font-size: 5rem;
+            color: var(--taffy);
+            line-height: 1;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(120, 95, 91, 0.1);
         }
         
         p {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             line-height: 1.8;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
         
         .signature {
-            font-style: italic;
-            font-size: 1.5rem;
-            color: var(--cocoa);
-            margin-top: 30px;
+            font-family: 'Parisienne', cursive;
+            font-size: 2rem;
+            color: var(--cinnamon);
+            margin-top: 40px;
         }
         
-        /* Animated Elements */
-        .peach {
+        /* Buns Animation */
+        .bun {
             position: absolute;
-            width: 50px;
-            height: 50px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,15 C60,5 80,5 85,20 C95,35 90,55 80,65 C70,85 30,85 20,65 C10,55 5,35 15,20 C20,5 40,5 50,15 Z" fill="%23E8A798"/><path d="M50,25 C55,20 60,25 58,30 C56,35 52,33 50,30 C48,33 44,35 42,30 C40,25 45,20 50,25 Z" fill="%23B08E8B"/></svg>');
-            background-size: contain;
-            opacity: 0.7;
-            z-index: 1;
-            animation: bounce 5s infinite ease-in-out;
-        }
-        
-        .cheek {
-            position: absolute;
-            width: 80px;
-            height: 60px;
-            background: radial-gradient(ellipse at center, var(--terracotta) 0%, var(--cocoa) 100%);
             border-radius: 50%;
-            opacity: 0.3;
-            filter: blur(5px);
-            animation: pulse 4s infinite ease-in-out;
+            background: radial-gradient(ellipse at center, var(--taffy) 0%, var(--cinnamon) 100%);
+            opacity: 0.5;
+            filter: blur(10px);
             z-index: 1;
+            animation: bounce 8s infinite ease-in-out;
+        }
+        
+        .bun-large {
+            width: 150px;
+            height: 120px;
+        }
+        
+        .bun-medium {
+            width: 100px;
+            height: 80px;
+        }
+        
+        .bun-small {
+            width: 70px;
+            height: 60px;
         }
         
         @keyframes bounce {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-30px) rotate(10deg); }
+            0%, 100% { 
+                transform: scale(1) rotate(0deg);
+                opacity: 0.4;
+            }
+            25% {
+                transform: scale(1.1) rotate(5deg);
+            }
+            50% { 
+                transform: scale(1.15) rotate(-5deg);
+                opacity: 0.7;
+            }
+            75% {
+                transform: scale(1.05) rotate(3deg);
+            }
         }
         
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+        /* Silhouette Decoration */
+        .silhouette {
+            position: absolute;
+            width: 300px;
+            height: 500px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400"><path d="M100,20 C120,20 130,50 130,80 C130,110 110,120 100,120 C90,120 70,110 70,80 C70,50 80,20 100,20 Z M80,130 C80,150 90,170 100,180 C110,170 120,150 120,130 L120,250 C120,300 100,350 100,380 C100,350 80,300 80,250 Z" fill="%237A5F5B" opacity="0.1"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 0;
+            opacity: 0.2;
         }
         
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
+            .love-title { font-size: 3.5rem; }
             h1 { font-size: 2.5rem; }
             p { font-size: 1.1rem; }
-            .message-box { padding: 20px; }
+            .love-message { padding: 30px; }
+            .bun-large { width: 100px; height: 80px; }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Parisienne&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="season-header">
-        <!-- Animated Elements will be added by JS -->
-        <div class="message-box">
-            <h1>This Season is a Celebration</h1>
-            <p>Of self-love and embracing the beauty of being unapologetically you. It's about dedicating time to the things that nourish your soul—whether that's indulging in the joy of getting your hair done or simply honoring your unique essence.</p>
-            <p>My new line is crafted to embody this very spirit: a tribute to confidence, authenticity, and the radiant power of self-worth. When you look your best, you shine your brightest—and that glow comes from within.</p>
-            <p>Remember, nurturing yourself is the foundation upon which all greatness is built.</p>
-            <div class="signature">With love,<br>Buns & Bundle</div>
+    <section class="love-header">
+        <!-- Silhouette -->
+        <div class="silhouette" style="left: 10%; top: 15%;"></div>
+        <div class="silhouette" style="right: 10%; bottom: 15%; transform: scaleX(-1);"></div>
+        
+        <!-- Message -->
+        <div class="love-message">
+            <div class="love-title">Love Buns & Bundles</div>
+            <h1>Celebrate Your Curves</h1>
+            <p>This is a sanctuary for the art of sensual living—where softness meets strength, and every curve tells a story of confidence. Our philosophy? Luxury begins with how you feel in your own skin.</p>
+            <p>Indulge in collections designed to highlight your natural beauty, because self-love isn't just a practice—it's a revolution of the senses.</p>
+            <div class="signature">xx, Buns & Bundles</div>
         </div>
     </section>
 
     <script>
-        // Create animated peaches
-        function createPeaches() {
-            const header = document.querySelector('.season-header');
-            for (let i = 0; i < 8; i++) {
-                const peach = document.createElement('div');
-                peach.className = 'peach';
-                peach.style.left = `${Math.random() * 100}%`;
-                peach.style.top = `${Math.random() * 100}%`;
-                peach.style.animationDelay = `${Math.random() * 5}s`;
-                peach.style.transform = `scale(${0.5 + Math.random()})`;
-                header.appendChild(peach);
+        // Create playful buns
+        function createBuns() {
+            const header = document.querySelector('.love-header');
+            const sizes = ['large', 'medium', 'small'];
+            
+            for (let i = 0; i < 15; i++) {
+                const bun = document.createElement('div');
+                const size = sizes[i % 3];
+                bun.className = `bun bun-${size}`;
+                
+                // Position buns
+                bun.style.left = `${Math.random() * 100}%`;
+                bun.style.top = `${Math.random() * 100}%`;
+                bun.style.animationDelay = `${Math.random() * 8}s`;
+                bun.style.opacity = `${0.3 + Math.random() * 0.4}`;
+                
+                // Alternate animation direction
+                if (i % 2 === 0) {
+                    bun.style.animationName = 'bounce';
+                } else {
+                    bun.style.animationName = 'bounce';
+                    bun.style.animationDirection = 'reverse';
+                }
+                
+                header.appendChild(bun);
             }
         }
         
-        // Create subtle cheeky elements
-        function createCheeks() {
-            const header = document.querySelector('.season-header');
-            for (let i = 0; i < 4; i++) {
-                const cheek = document.createElement('div');
-                cheek.className = 'cheek';
-                cheek.style.left = `${10 + (Math.random() * 80)}%`;
-                cheek.style.top = `${10 + (Math.random() * 80)}%`;
-                cheek.style.animationDelay = `${Math.random() * 4}s`;
-                header.appendChild(cheek);
-            }
-        }
-        
-        // Initialize animations
         window.onload = function() {
-            createPeaches();
-            createCheeks();
+            createBuns();
         };
     </script>
 </body>
