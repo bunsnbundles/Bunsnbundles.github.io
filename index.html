@@ -72,7 +72,15 @@
             text-align: center;
         }
         
-        /* VISIBLE Animated Peaches */
+        .website {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--cocoa);
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        /* Peach Animation - GUARANTEED VISIBLE */
         .peach {
             position: absolute;
             width: 60px;
@@ -84,33 +92,9 @@
             animation: bounce 4s infinite ease-in-out;
             filter: drop-shadow(0 3px 5px rgba(91, 74, 66, 0.3));
             opacity: 0.9;
-            /* Ensures visibility */
+            /* Force visibility */
             display: block !important;
             visibility: visible !important;
-        }
-        
-        /* VISIBLE Cheek Elements */
-        .cheek {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(ellipse at center, var(--terracotta) 0%, var(--nude) 100%);
-            opacity: 0.4;
-            filter: blur(8px);
-            z-index: 3;
-            animation: pulse 5s infinite ease-in-out;
-            /* Ensures visibility */
-            display: block !important;
-            visibility: visible !important;
-        }
-        
-        .cheek-large {
-            width: 120px;
-            height: 90px;
-        }
-        
-        .cheek-medium {
-            width: 80px;
-            height: 60px;
         }
         
         @keyframes bounce {
@@ -128,18 +112,13 @@
             }
         }
         
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.4; }
-            50% { transform: scale(1.2); opacity: 0.6; }
-        }
-        
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             p { font-size: 1rem; }
             .message-box { padding: 30px; }
             .peach { width: 40px; height: 40px; }
-            .cheek-large { width: 80px; height: 60px; }
+            .signature { font-size: 2rem; }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Parisienne&display=swap" rel="stylesheet">
@@ -149,24 +128,24 @@
         <!-- Message Box -->
         <div class="message-box">
             <h1>This season is a celebration of self-love</h1>
-            <p>Of embracing the beauty of being unapologetically you.<br>
-            It's about making time for the things that nourish your spirit, whether that's indulging in the joy of getting your hair done or simply honoring your unique essence.</p>
+            <p>Of embracing the beauty of being unapologetically you.</p>
             
-            <p class="highlight">Buns & Bundles is crafted to embody this very spirit:<br>
-            A tribute to confidence, authenticity, and the radiant power of self-worth.<br>
-            When you look your best, you shine your brightest and that glow comes from within.</p>
+            <p>It's about making time for the things that nourish your spirit, whether that's indulging in the joy of getting your hair done or simply honoring your unique essence.</p>
+            
+            <p class="highlight">Buns & Bundles is crafted to embody this very spirit: A tribute to confidence, authenticity, and the radiant power of self-worth. When you look your best, you shine your brightest and that glow comes from within.</p>
             
             <p>Remember: Nurturing yourself is the foundation upon which all greatness is built.</p>
             
             <div class="signature">Buns & Bundles</div>
+            <div class="website">bunsnbundles.github.io</div>
         </div>
     </div>
 
     <script>
-        // Create VISIBLE bouncing peaches
+        // Create 12 VISIBLE bouncing peaches
         function createPeaches() {
             const container = document.querySelector('.container');
-            for (let i = 0; i < 10; i++) { // Increased to 10 peaches
+            for (let i = 0; i < 12; i++) {
                 const peach = document.createElement('div');
                 peach.className = 'peach';
                 peach.style.left = `${Math.random() * 85 + 5}%`;
@@ -174,33 +153,16 @@
                 peach.style.animationDelay = `${Math.random() * 4}s`;
                 peach.style.transform = `rotate(${Math.random() * 360}deg)`;
                 container.appendChild(peach);
-                console.log('Peach created at', peach.style.left, peach.style.top); // Debugging
             }
         }
         
-        // Create VISIBLE cheek elements
-        function createCheeks() {
-            const container = document.querySelector('.container');
-            const sizes = ['large', 'medium'];
-            
-            for (let i = 0; i < 8; i++) { // Increased to 8 cheeks
-                const cheek = document.createElement('div');
-                const size = sizes[i % 2];
-                cheek.className = `cheek cheek-${size}`;
-                cheek.style.left = `${Math.random() * 85 + 5}%`;
-                cheek.style.top = `${Math.random() * 85 + 5}%`;
-                cheek.style.animationDelay = `${Math.random() * 5}s`;
-                container.appendChild(cheek);
-                console.log('Cheek created at', cheek.style.left, cheek.style.top); // Debugging
-            }
-        }
+        // Initialize animations when window loads
+        window.addEventListener('load', createPeaches);
         
-        // Initialize animations
-        window.onload = function() {
+        // Also initialize if window is already loaded
+        if (document.readyState === 'complete') {
             createPeaches();
-            createCheeks();
-            console.log('All animations loaded'); // Debugging
-        };
+        }
     </script>
 </body>
 </html>
