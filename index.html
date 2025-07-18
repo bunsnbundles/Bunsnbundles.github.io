@@ -3,194 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Buns & Bundles | Sensual Self-Care</title>
+    <title>Buns & Bundle | Season of Self-Love</title>
     <style>
-        /* Deep Velvet Nudes */
+        /* Deep Nude Aesthetics */
         :root {
-            --cashmere: #F3E7E3;
-            --peachbloom: #E8C4B8;
-            --taffy: #D8A798;
-            --cinnamon: #B08E8B;
-            --molasses: #7A5F5B;
+            --cream: #F5E9E4;
+            --blush: #E8C4C0;
+            --terracotta: #D8A798;
+            --cocoa: #B08E8B;
+            --mocha: #8C6E6B;
         }
         
         body {
-            background: var(--cashmere);
-            font-family: 'Playfair Display', serif;
-            color: var(--molasses);
+            background-color: var(--cream);
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--mocha);
             margin: 0;
             overflow-x: hidden;
         }
         
-        .love-header {
+        .season-header {
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: 
-                radial-gradient(circle at 20% 30%, var(--peachbloom) 0%, transparent 30%),
-                radial-gradient(circle at 80% 70%, var(--taffy) 0%, transparent 30%),
-                var(--cashmere);
+            background: linear-gradient(135deg, var(--blush), var(--cream));
             position: relative;
             overflow: hidden;
+            padding: 0 20px;
         }
         
-        .love-message {
+        .message-box {
             max-width: 800px;
-            padding: 50px;
-            background: rgba(243, 231, 227, 0.9);
-            border-radius: 30px;
-            box-shadow: 0 15px 40px rgba(216, 167, 152, 0.4);
+            padding: 40px;
+            background-color: rgba(245, 233, 228, 0.85);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(216, 167, 152, 0.3);
             z-index: 10;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(216, 167, 152, 0.3);
+            backdrop-filter: blur(3px);
+            border: 1px solid rgba(216, 167, 152, 0.2);
         }
         
         h1 {
-            font-size: 4rem;
-            color: var(--molasses);
-            margin-bottom: 25px;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-        
-        .love-title {
-            font-family: 'Parisienne', cursive;
-            font-size: 5rem;
-            color: var(--taffy);
-            line-height: 1;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(120, 95, 91, 0.1);
+            font-size: 3.5rem;
+            color: var(--mocha);
+            margin-bottom: 20px;
+            font-weight: 300;
+            text-shadow: 1px 1px 3px rgba(140, 110, 107, 0.1);
         }
         
         p {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             line-height: 1.8;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         
         .signature {
-            font-family: 'Parisienne', cursive;
-            font-size: 2rem;
-            color: var(--cinnamon);
-            margin-top: 40px;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--cocoa);
+            margin-top: 30px;
         }
         
-        /* Buns Animation */
-        .bun {
+        /* Cheek Animations */
+        .cheek {
             position: absolute;
             border-radius: 50%;
-            background: radial-gradient(ellipse at center, var(--taffy) 0%, var(--cinnamon) 100%);
-            opacity: 0.5;
-            filter: blur(10px);
+            opacity: 0.4;
+            filter: blur(8px);
+            animation: pulse 6s infinite ease-in-out;
             z-index: 1;
-            animation: bounce 8s infinite ease-in-out;
+            background: radial-gradient(ellipse at center, var(--terracotta) 0%, var(--cocoa) 100%);
         }
         
-        .bun-large {
-            width: 150px;
-            height: 120px;
+        .cheek-large {
+            width: 120px;
+            height: 90px;
         }
         
-        .bun-medium {
-            width: 100px;
-            height: 80px;
-        }
-        
-        .bun-small {
-            width: 70px;
+        .cheek-medium {
+            width: 80px;
             height: 60px;
         }
         
-        @keyframes bounce {
+        .cheek-small {
+            width: 50px;
+            height: 40px;
+        }
+        
+        @keyframes pulse {
             0%, 100% { 
-                transform: scale(1) rotate(0deg);
+                transform: scale(1) translateY(0);
                 opacity: 0.4;
             }
-            25% {
-                transform: scale(1.1) rotate(5deg);
-            }
             50% { 
-                transform: scale(1.15) rotate(-5deg);
-                opacity: 0.7;
-            }
-            75% {
-                transform: scale(1.05) rotate(3deg);
+                transform: scale(1.2) translateY(-10px);
+                opacity: 0.6;
             }
         }
         
-        /* Silhouette Decoration */
-        .silhouette {
-            position: absolute;
-            width: 300px;
-            height: 500px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400"><path d="M100,20 C120,20 130,50 130,80 C130,110 110,120 100,120 C90,120 70,110 70,80 C70,50 80,20 100,20 Z M80,130 C80,150 90,170 100,180 C110,170 120,150 120,130 L120,250 C120,300 100,350 100,380 C100,350 80,300 80,250 Z" fill="%237A5F5B" opacity="0.1"/></svg>');
-            background-repeat: no-repeat;
-            background-position: center;
-            z-index: 0;
-            opacity: 0.2;
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(-20px) translateX(10px); }
         }
         
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .love-title { font-size: 3.5rem; }
             h1 { font-size: 2.5rem; }
             p { font-size: 1.1rem; }
-            .love-message { padding: 30px; }
-            .bun-large { width: 100px; height: 80px; }
+            .message-box { padding: 20px; }
+            .cheek-large { width: 80px; height: 60px; }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Parisienne&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="love-header">
-        <!-- Silhouette -->
-        <div class="silhouette" style="left: 10%; top: 15%;"></div>
-        <div class="silhouette" style="right: 10%; bottom: 15%; transform: scaleX(-1);"></div>
-        
-        <!-- Message -->
-        <div class="love-message">
-            <div class="love-title">Love Buns & Bundles</div>
-            <h1>Celebrate Your Curves</h1>
-            <p>This is a sanctuary for the art of sensual living—where softness meets strength, and every curve tells a story of confidence. Our philosophy? Luxury begins with how you feel in your own skin.</p>
-            <p>Indulge in collections designed to highlight your natural beauty, because self-love isn't just a practice—it's a revolution of the senses.</p>
-            <div class="signature">xx, Buns & Bundles</div>
+    <section class="season-header">
+        <!-- Cheek elements will be added by JS -->
+        <div class="message-box">
+            <h1>This Season is a Celebration</h1>
+            <p>Of self-love and embracing the beauty of being unapologetically you. It's about dedicating time to the things that nourish your soul—whether that's indulging in the joy of getting your hair done or simply honoring your unique essence.</p>
+            <p>My new line is crafted to embody this very spirit: a tribute to confidence, authenticity, and the radiant power of self-worth. When you look your best, you shine your brightest—and that glow comes from within.</p>
+            <p>Remember, nurturing yourself is the foundation upon which all greatness is built.</p>
+            <div class="signature">With love,<br>Buns & Bundle</div>
         </div>
     </section>
 
     <script>
-        // Create playful buns
-        function createBuns() {
-            const header = document.querySelector('.love-header');
+        // Create cheeky elements
+        function createCheeks() {
+            const header = document.querySelector('.season-header');
             const sizes = ['large', 'medium', 'small'];
             
-            for (let i = 0; i < 15; i++) {
-                const bun = document.createElement('div');
+            // Create 12 cheek elements (4 of each size)
+            for (let i = 0; i < 12; i++) {
+                const cheek = document.createElement('div');
                 const size = sizes[i % 3];
-                bun.className = `bun bun-${size}`;
+                cheek.className = `cheek cheek-${size}`;
                 
-                // Position buns
-                bun.style.left = `${Math.random() * 100}%`;
-                bun.style.top = `${Math.random() * 100}%`;
-                bun.style.animationDelay = `${Math.random() * 8}s`;
-                bun.style.opacity = `${0.3 + Math.random() * 0.4}`;
-                
-                // Alternate animation direction
-                if (i % 2 === 0) {
-                    bun.style.animationName = 'bounce';
-                } else {
-                    bun.style.animationName = 'bounce';
-                    bun.style.animationDirection = 'reverse';
-                }
-                
-                header.appendChild(bun);
-            }
-        }
-        
-        window.onload = function() {
-            createBuns();
-        };
-    </script>
-</body>
-</html>
+                // Position cheeks around the edges
+                if (i < 3) {
+                    // Left side
+                    cheek.style.left = `${5 + (Math.random() * 15)}%`;
