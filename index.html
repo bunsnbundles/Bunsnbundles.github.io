@@ -13,22 +13,35 @@
       color: #3d3d3d;
     }
 
-    header {
-      background: #e8ded3;
-      padding: 40px 20px;
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      background-image: url('https://images.unsplash.com/photo-1618221195710-1e43bba10f82?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
     }
 
-    header h1 {
+    .hero-text {
+      background: rgba(255, 250, 245, 0.85);
+      padding: 20px 40px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.8em;
       color: #5c5044;
       letter-spacing: 1px;
     }
 
-    header p {
+    .hero p {
       margin-top: 10px;
-      font-size: 1.1em;
+      font-size: 1.2em;
       color: #7d7265;
     }
 
@@ -42,8 +55,8 @@
       background: #fffaf5;
       padding: 25px;
       margin-bottom: 30px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     }
 
     .post h2 {
@@ -53,7 +66,7 @@
     }
 
     .post p {
-      line-height: 1.6;
+      line-height: 1.7;
       color: #4a443b;
     }
 
@@ -65,17 +78,20 @@
     }
 
     @media(max-width: 600px){
-      header h1 { font-size: 2em; }
+      .hero-text { padding: 15px 20px; }
+      .hero h1 { font-size: 2em; }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Cindy J – Blog & Lifestyle</h1>
-  <p>Soft life, glow-ups, & everything in between</p>
-</header>
+<div class="hero">
+  <div class="hero-text">
+    <h1>Cindy J – Blog & Lifestyle</h1>
+    <p>Soft life, glow-ups, & everything in between</p>
+  </div>
+</div>
 
 <section class="blog">
   <div class="post">
